@@ -145,14 +145,13 @@ header .intro h3{
 }
 
 header .overlay{
-    position: absolute;
+     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background-color: #000;
-    opacity: 40%;
-    z-index: -1;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Warna hitam dengan transparansi 30% */
+    z-index: 2; /* Menempatkan overlay di atas video */
 }
 
 .tombol-menu{
