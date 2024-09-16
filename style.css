@@ -17,6 +17,7 @@ body{
 
 .intro p {
     padding: 0px 50px;
+    text-shadow: #000000;
 }
 
 .layar-dalam {
@@ -254,22 +255,24 @@ section.abuabu{
 section#gallery {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    overflow: hidden;
-    padding: 10px 0px 10px 0px;
+    overflow-x: auto; /* Menambahkan scroll horizontal */
+    padding: 10px 0;
+    white-space: nowrap; /* Mencegah pembungkusan teks */
 }
 
-section#gallery div{
+section#gallery div {
+    display: inline-block; /* Mengatur div agar berada di baris yang sama */
     padding: 10px;
 }
 
-section#gallery div img{
+section#gallery div img {
     height: 100px;
     border-radius: 5px;
+    display: block; /* Menghindari spasi ekstra di bawah gambar */
 }
 
-section#gallery div img:hover{
-    transition: 0,5 ease-in-out;
+section#gallery div img:hover {
+    transition: transform 0.5s ease-in-out; /* Perbaiki kesalahan pada properti transition */
     transform: scale(1.1);
 }
 
@@ -397,7 +400,7 @@ body {
     font-size: 0.9rem;
   }
   
-
+  
 @media screen and (max-width: 991.98px) {
     .layar-dalam{
         width: 90%;
