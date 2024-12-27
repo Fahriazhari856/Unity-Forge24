@@ -182,7 +182,7 @@ section.image{
   /* Gambar lain menyusut saat salah satu gambar di-hover */
   .image img:not(:hover) {
     transform: scale(0.9); /* Mengecilkan gambar lain */
-    opacity: 0.5; /* Memburamkan gambar lain */
+    opacity: 100%; /* Memburamkan gambar lain */
     z-index: -1;
   }
 
