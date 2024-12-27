@@ -1,0 +1,244 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+html {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.layar-dalam {
+  width: 1000px;
+  margin: auto;
+}
+
+.layar-penuh {
+  width: 100%;
+}
+
+.layar-penuh video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga rasio aspek video */
+  z-index: -1; /* Agar video berada di belakang konten lain */
+}
+
+nav {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  border-bottom: 1px solid #b1b1b1;
+  line-height: 60px;
+  width: 100%;
+  transition: background-color 0.6s ease;
+}
+
+nav.putih {
+  background-color: #fff;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Warna hitam dengan transparansi 30% */
+  z-index: 2; /* Menempatkan overlay di atas video */
+}
+
+nav .logo {
+  float: left; /* Memastikan logo berada di sebelah kiri */
+  line-height: 55px; /* Menyelaraskan teks dengan tinggi logo jika diperlukan */
+  margin-right: 20px; /* Jarak antara logo dan item navigasi */
+  position: relative; /* Posisi relatif untuk penataan lebih lanjut */
+  text-align: center; /* Menyelaraskan gambar di tengah kontainer logo */
+}
+
+/* Gaya untuk gambar logo */
+nav .logo img {
+  vertical-align: middle; /* Menyelaraskan gambar logo secara vertikal */
+  width: 120px; /* Menyediakan lebar tetap untuk gambar logo */
+  height: auto; /* Menjaga rasio aspek gambar logo */
+}
+
+nav .menu {
+  float: right;
+  height: 60px;
+  max-width: 600px;
+}
+
+nav .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav .menu ul.show {
+  display: block; /* Display when shown */
+}
+
+nav .menu ul li {
+  list-style-type: none;
+  float: left;
+  line-height: 60px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-align: center;
+  padding: 0px 16px 0px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav.putih {
+  background-color: #fff;
+}
+nav.putih .tombol-menu .garis {
+  background-color: #004e75;
+}
+nav .logo img.hitam {
+  display: none;
+}
+
+nav.putih ul li a {
+  color: #333;
+}
+
+/*pengaturan header*/
+
+header {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+
+header .intro {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+
+header .intro h3 {
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+section.image{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.image img {
+    transform: scale(1.2); /* Membesarkan gambar */
+    z-index: 10; /* Membawa ke depan */
+    opacity: 100%; /* Pastikan tidak buram */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+    border-radius: 0%;
+    transform: scale(1); /* Default tidak ada transformasi */
+    opacity: 1; /* Default tidak buram */  
+  }
+
+.image img:hover {
+    transform: scale(1); /* Membesarkan gambar */
+    opacity: 1; /* Pastikan tidak buram */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+    transition: transform 0.3s ease-in-out 0.3s, border-radius 0.5s ease-in-out 0.5s, box-shadow 0.3s ease-in-out 0.3s; /* Tambahkan properti transisi untuk border-radius dan box-shadow */
+    border-radius: 10px; /* Default tanpa border-radius */
+  }
+  
+  /* Gambar lain menyusut saat salah satu gambar di-hover */
+  .image img:not(:hover) {
+    transform: scale(0.9); /* Mengecilkan gambar lain */
+    opacity: 0.5; /* Memburamkan gambar lain */
+    z-index: -1;
+  }
+
+  .col {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .col img {
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px;
+  }
+  
+
+  /* Overlay untuk teks "See More" */
+ .col .overlay {
+  position: absolute;
+  top: 50%; /* Posisikan ke tengah secara vertikal */
+  left: 50%; /* Posisikan ke tengah secara horizontal */
+  transform: translate(-50%, -50%); /* Pastikan posisi benar-benar di tengah */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Awalnya tersembunyi */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Tampilkan overlay saat hover */
+  .col:hover .overlay{
+    opacity: 1;
+    transform: 0.5s translate(-50%, -50%) scale(1); /* Animasi muncul */
+    text-decoration: none;
+  }
+
+  .download{
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6); /* Latar belakang semi-transparan */
+  padding: 10px 20px;
+  border-radius: 5px;
+  height: 40px;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 15px;
+  z-index: 10;
+  }
+  
+  
+.photo {
+  padding-top: 20px;
+}
+
+.col {
+  padding-top: 20px;
+}
