@@ -22,6 +22,7 @@ body {
 
 .layar-penuh {
   width: 100%;
+  background-color: black;
 }
 
 .layar-penuh video {
@@ -92,12 +93,7 @@ header .overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.3
-  ); /* Warna hitam dengan transparansi 30% */
+  background-color: rgb(0, 0, 0); /* Warna hitam dengan transparansi 30% */
   z-index: 2; /* Menempatkan overlay di atas video */
 }
 
@@ -188,6 +184,8 @@ header {
   width: 100%;
   overflow: hidden;
   z-index: 2;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), 
+                url('./gambar_dan_video/Desain\ tanpa\ judul1.jpg') no-repeat center center/cover;
 }
 
 header video {
@@ -207,28 +205,32 @@ header .intro {
 }
 
 h1.teks-header{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 10px 0px 10px 0px;
-    background-color: #fff;
-    box-shadow: 10px 5px 10px #3333332b;
-    margin: 20px 120px 20px 120px;
-    border-radius: 10px;
+  text-align: center;
+  content: "";
+  color: white;
+  border-bottom: 5px solid orange;
+  width: 90px;
+  display: block;
+  margin: 20px auto;
 }
 
+
 section.image{
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #ffffff;
-    margin: 20px 20px 10px 20px;
-    border-radius: 20%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 140, 0, 0.376)), 
+  url('') no-repeat center center/cover;
+  margin: 20px 20px 0px 20px;
+  border-radius: 10px;
+  padding-bottom: 30px;
 }
 
   /* Gambar lain menyusut saat salah satu gambar di-hover */
-  .image img:not(:hover) {
-    transform: scale(0.9); /* Mengecilkan gambar lain */
-    opacity: 100; /* Memburamkan gambar lain */
-    z-index: -1;
+  .image img{
+    border-radius: 30px;
+    margin: 10px;
+    width: 90%;
+    height: auto;
   }
 
   .col {
@@ -241,6 +243,7 @@ section.image{
   
 .photo {
   padding-top: 20px;
+  padding-left: 40px;
 }
 
 .col {
@@ -295,6 +298,19 @@ section.image{
   background-color: #ddd;
 }
 
+section.halaman-akhir{
+  background-color: #ffffff;
+  padding-bottom: 30px;
+}
+
+section.halaman-akhir h1{
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: Tahoma;
+}
+
 @media screen and (max-width: 880px) {
     nav .logo {
         padding-left: 20px;
@@ -326,18 +342,13 @@ section.image{
       h1.teks-header{
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        padding: 10px 0px 10px 0px;
-        background-color: #fff;
-        box-shadow: 10px 10px 10px #33333386;
-        margin: 20px 60px 20px 60px;
-        border-radius: 10px;
+        color: #ffffff;
     }
 
     section.image{
       padding-left: 5px;
       padding-right: 5px;
-      background-color: #ffffffc9;
-      margin: 10px 10px 20px 10px;
+      margin: 10px 10px 0px 10px;
       border-radius: 10px;
   }
   
@@ -346,22 +357,34 @@ section.image{
     text-align: center;
   }
 
-    .image img{
-    transform: scale(1); /* Membesarkan gambar */
-    opacity: 1; /* Pastikan tidak buram */
-    transition: transform 0.3s ease-in-out 0.3s, border-radius 0.5s ease-in-out 0.5s, box-shadow 0.3s ease-in-out 0.3s; /* Tambahkan properti transisi untuk border-radius dan box-shadow */
+  .image img{
     border-radius: 10px;
+    width: 100%;
+    height: auto;
   }
 
-  .modal-content {
-    max-width: 90%;
-    max-height: auto;
-    }
+  .photo{
+    transform: translate(-10%, 0);
+    width: 105%;
+    height: 100%;
+  }
 
     #downloadLink {
       bottom: 180px;
       right: 140px;
       padding: 10px 20px;
+    }
+
+    section.halaman-akhir{
+      background-color: #000000;
+    }
+
+    .modal {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      z-index: 1000;
     }
 
   }
