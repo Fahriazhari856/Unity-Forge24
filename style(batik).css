@@ -1,367 +1,390 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 20px;
-    font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+html {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.layar-dalam {
+  width: 1000px;
+  margin: auto;
+}
+
+.layar-penuh {
+  width: 100%;
+  background-color: black;
+}
+
+.layar-penuh video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga rasio aspek video */
+  z-index: -1; /* Agar video berada di belakang konten lain */
+}
+
+nav {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  border-bottom: 1px solid #b1b1b1;
+  line-height: 60px;
+  width: 100%;
+  transition: background-color 0.6s ease;
+}
+
+nav.putih {
+  background-color: #fff;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+
+header .intro {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+
+.intro{
+  transform: translate(0, -10%);
+}
+
+header .intro h5 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+header .intro h2 {
+  font-size: 80px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-top: -10px;
+  padding: 0;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Warna hitam dengan transparansi 30% */
+  z-index: 2; /* Menempatkan overlay di atas video */
+}
+
+.tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
   }
-  
-  html {
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .layar-dalam {
-    width: 1000px;
-    margin: auto;
-  }
-  
-  .layar-penuh {
-    width: 100%;
-  }
-  
-  .layar-penuh video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Menjaga rasio aspek video */
-    z-index: -1; /* Agar video berada di belakang konten lain */
-  }
-  
-  nav {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    border-bottom: 1px solid #b1b1b1;
-    line-height: 60px;
-    width: 100%;
-    transition: background-color 0.6s ease;
-  }
-  
-  nav.putih {
+
+  .tombol-menu .garis {
+    height: 3px;
     background-color: #fff;
   }
   
-  header {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    z-index: 2;
-  }
-  
-  header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -2;
-  }
-  
-  header .intro {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    top: 50%;
-  }
-  
-  .intro{
-    transform: translate(0, -10%);
-  }
-  
-  header .intro h5 {
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-  }
-  header .intro h2 {
-    font-size: 80px;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-top: -10px;
-    padding: 0;
-  }
-  
-  header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.3
-    ); /* Warna hitam dengan transparansi 30% */
-    z-index: 2; /* Menempatkan overlay di atas video */
-  }
-  
-  .tombol-menu {
-      position: absolute;
-      top: 1.7rem;
-      right: 1rem;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 20px;
-    }
-  
-    .tombol-menu .garis {
-      height: 3px;
-      background-color: #fff;
-    }
-    
-  
-  nav .logo {
-    float: left; /* Memastikan logo berada di sebelah kiri */
-    line-height: 55px; /* Menyelaraskan teks dengan tinggi logo jika diperlukan */
-    margin-right: 20px; /* Jarak antara logo dan item navigasi */
-    position: relative; /* Posisi relatif untuk penataan lebih lanjut */
-    text-align: center; /* Menyelaraskan gambar di tengah kontainer logo */
-  }
-  
-  /* Gaya untuk gambar logo */
-  nav .logo img {
-    vertical-align: middle; /* Menyelaraskan gambar logo secara vertikal */
-    width: 120px; /* Menyediakan lebar tetap untuk gambar logo */
-    height: auto; /* Menjaga rasio aspek gambar logo */
-  }
-  
-  nav .menu {
-    float: right;
-    height: 60px;
-    max-width: 600px;
-  }
-  
-  nav .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav .menu ul.show {
-    display: block; /* Display when shown */
-  }
-  
-  nav .menu ul li {
-    list-style-type: none;
-    float: left;
-    line-height: 60px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-align: center;
-    padding: 0px 16px 0px 16px;
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  nav.putih {
-    background-color: #fff;
-  }
-  nav.putih .tombol-menu .garis {
-    background-color: #004e75;
-  }
-  nav .logo img.hitam {
-    display: none;
-  }
-  
-  nav.putih ul li a {
-    color: #333;
-  }
-  
-  /*pengaturan header*/
-  
-  header {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    z-index: 2;
-  }
-  
-  header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -2;
-  }
-  
-  header .intro {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    top: 50%;
-  }
-  
-  h1.teks-header{
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-      padding: 10px 0px 10px 0px;
-      background-color: #fff;
-      box-shadow: 10px 5px 10px #3333332b;
-      margin: 20px 120px 20px 120px;
-      border-radius: 10px;
-  }
-  
-  section.image{
-      padding-left: 10px;
-      padding-right: 10px;
-      background-color: #ffffff;
-      margin: 20px 20px 10px 20px;
-      border-radius: 20%;
+
+nav .logo {
+  float: left; /* Memastikan logo berada di sebelah kiri */
+  line-height: 55px; /* Menyelaraskan teks dengan tinggi logo jika diperlukan */
+  margin-right: 20px; /* Jarak antara logo dan item navigasi */
+  position: relative; /* Posisi relatif untuk penataan lebih lanjut */
+  text-align: center; /* Menyelaraskan gambar di tengah kontainer logo */
+}
+
+/* Gaya untuk gambar logo */
+nav .logo img {
+  vertical-align: middle; /* Menyelaraskan gambar logo secara vertikal */
+  width: 120px; /* Menyediakan lebar tetap untuk gambar logo */
+  height: auto; /* Menjaga rasio aspek gambar logo */
+}
+
+nav .menu {
+  float: right;
+  height: 60px;
+  max-width: 600px;
+}
+
+nav .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav .menu ul.show {
+  display: block; /* Display when shown */
+}
+
+nav .menu ul li {
+  list-style-type: none;
+  float: left;
+  line-height: 60px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-align: center;
+  padding: 0px 16px 0px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav.putih {
+  background-color: #fff;
+}
+nav.putih .tombol-menu .garis {
+  background-color: #004e75;
+}
+nav .logo img.hitam {
+  display: none;
+}
+
+nav.putih ul li a {
+  color: #333;
+}
+
+/*pengaturan header*/
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), 
+                url('./gambar_dan_video/Desain\ tanpa\ judul1.jpg') no-repeat center center/cover;
+}
+
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+
+header .intro {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+
+h1.teks-header{
+  text-align: center;
+  content: "";
+  color: white;
+  border-bottom: 5px solid orange;
+  width: 90px;
+  display: block;
+  margin: 20px auto;
+}
+
+
+section.image{
+  padding-left: 10px;
+  padding-right: 10px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 140, 0, 0.376)), 
+  url('') no-repeat center center/cover;
+  margin: 20px 20px 0px 20px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+  /* Gambar lain menyusut saat salah satu gambar di-hover */
+  .image img{
+    border-radius: 30px;
+    margin: 10px;
+    width: 90%;
+    height: auto;
   }
 
-    /* Gambar lain menyusut saat salah satu gambar di-hover */
-    .image img:not(:hover) {
-      transform: scale(0.9); /* Mengecilkan gambar lain */
-      opacity: 100; /* Memburamkan gambar lain */
-      z-index: -1;
-    }
-  
-    .col {
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    
-  .photo {
-    padding-top: 20px;
-  }
-  
   .col {
-    padding-top: 0px;
-  }
-
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modal-content {
-    max-width: 70%;
-    max-height: auto;
-    margin: auto;
-    display: block;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
     border-radius: 10px;
   }
+
   
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
-  }
-  
-  #downloadLink {
-    position: absolute;
-    bottom: 20px;
-    right: 40px;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  #downloadLink:hover {
-    background-color: #ddd;
-  }
-  
-  @media screen and (max-width: 880px) {
-      nav .logo {
-          padding-left: 20px;
-        }
-  
-        nav .menu ul {
-          display: none;
-          margin-top: 50px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-        }
-        nav .menu ul li {
-          width: 100%;
-          border-bottom: 1px solid #ccc;
-          background-color: #fff;
-          line-height: 40px;
-        }
-        nav .menu ul li a {
-          color: #333;
-        }
-        .tombol-menu {
-          display: flex;
-          top: 20px;
-          right: 20px;
-        }
-  
-        h1.teks-header{
-          font-family: Arial, Helvetica, sans-serif;
-          text-align: center;
-          padding: 10px 0px 10px 0px;
-          background-color: #fff;
-          box-shadow: 10px 10px 10px #33333386;
-          margin: 20px 60px 20px 60px;
-          border-radius: 10px;
+.photo {
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+.col {
+  padding-top: 0px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  max-width: 70%;
+  max-height: auto;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+#downloadLink {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#downloadLink:hover {
+  background-color: #ddd;
+}
+
+section.halaman-akhir{
+  background-color: #ffffff;
+  padding-bottom: 30px;
+}
+
+section.halaman-akhir h1{
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: Tahoma;
+}
+
+@media screen and (max-width: 880px) {
+    nav .logo {
+        padding-left: 20px;
       }
-  
-      section.image{
-        padding-left: 5px;
-        padding-right: 5px;
-        background-color: #ffffffc9;
-        margin: 10px 10px 20px 10px;
-        border-radius: 10px;
-    }
-    
-    .intro h3{
-      justify-content: center;
-      text-align: center;
+
+      nav .menu ul {
+        display: none;
+        margin-top: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      nav .menu ul li {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+        line-height: 40px;
+      }
+      nav .menu ul li a {
+        color: #333;
+      }
+      .tombol-menu {
+        display: flex;
+        top: 20px;
+        right: 20px;
+      }
+
+      h1.teks-header{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: #ffffff;
     }
 
-      .image img{
-      transform: scale(1); /* Membesarkan gambar */
-      opacity: 1; /* Pastikan tidak buram */
-      transition: transform 0.3s ease-in-out 0.3s, border-radius 0.5s ease-in-out 0.5s, box-shadow 0.3s ease-in-out 0.3s; /* Tambahkan properti transisi untuk border-radius dan box-shadow */
+    section.image{
+      padding-left: 5px;
+      padding-right: 5px;
+      margin: 10px 10px 0px 10px;
       border-radius: 10px;
+  }
+  
+  .intro h3{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .image img{
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .photo{
+    transform: translate(-10%, 0);
+    width: 105%;
+    height: 100%;
+  }
+
+    #downloadLink {
+      bottom: 180px;
+      right: 140px;
+      padding: 10px 20px;
     }
 
-    .modal-content {
-      max-width: 90%;
-      max-height: auto;
-      }
-
-      #downloadLink {
-        bottom: 180px;
-        right: 140px;
-        padding: 10px 20px;
-      }
-
+    section.halaman-akhir{
+      background-color: #000000;
     }
+
+    .modal {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      z-index: 1000;
+    }
+
+  }
