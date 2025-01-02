@@ -326,6 +326,29 @@ section#gallery div {
   transform: scale(1.1); /* Membesarkan tombol saat hover */
 }
 
+.card img{
+  width: 50%;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column; /* Mengatur elemen dalam kolom */
+  align-items: center;   /* Pusatkan secara horizontal */
+  justify-content: center; /* Pusatkan secara vertikal */
+  text-align: center;    /* Pastikan teks tetap di tengah */
+  padding: 20px;         /* Tambahkan jarak jika diperlukan */
+}
+
+.card-img-top {
+  margin-bottom: 15px; /* Beri jarak dengan teks */
+}
+
+.card-text {
+  font-size: 14px; /* Sesuaikan ukuran teks */
+  line-height: 1.5; /* Buat teks lebih terbaca */
+}
+
 /**/
 
 section#gallery div img {
@@ -701,9 +724,6 @@ section.putih {
   }
 
   /* Tambahan gaya opsional */
-  .text-center {
-    text-align: center; /* Mengatur teks agar berada di tengah */
-  }
 
   section#galery1 {
     display: flex;
